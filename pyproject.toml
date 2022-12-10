@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "projeto-fastapi-web"
+version = "0.1.0"
+description = ""
+authors = ["mielesantos <mielesnts@gmail.com>"]
+readme = "README.md"
+packages = [{include = "projeto_fastapi_web"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = "^0.20.0"
+Jinja2 = "^3.1.2"
+python-multipart = "^0.0.5"
+aiofile = "^3.8.1"
+SQLAlchemy = "^1.4.44"
+psycopg2-binary = "^2.9.5"
+asyncpg = "^0.27.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+mypy = "^0.991"
+black = {version = "^22.10.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
