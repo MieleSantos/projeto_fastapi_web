@@ -28,6 +28,12 @@ async def contact(request: Request):
     return templates.TemplateResponse("contact/index.html", context=context)
 
 
+@app.get("/pricing", name="pricing")
+async def pricing(request: Request):
+    context = {"request": request}
+    return templates.TemplateResponse("pricing/index.html", context=context)
+
+
 if __name__ == "__main__":
     import uvicorn
 
