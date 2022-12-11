@@ -13,8 +13,13 @@ app.mount("/media", StaticFiles(directory="media"), name="media")
 @app.get("/", name="index")
 async def index(request: Request):
     context = {"request": request}
-
     return templates.TemplateResponse("home/index.html", context=context)
+
+
+@app.get("/about", name="about")
+async def about(request: Request):
+    context = {"request": request}
+    return templates.TemplateResponse("about/index.html", context=context)
 
 
 if __name__ == "__main__":
