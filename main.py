@@ -34,6 +34,12 @@ async def pricing(request: Request):
     return templates.TemplateResponse("pricing/index.html", context=context)
 
 
+@app.get("/faq", name="faq")
+async def faq(request: Request):
+    context = {"request": request}
+    return templates.TemplateResponse("faq/index.html", context=context)
+
+
 if __name__ == "__main__":
     import uvicorn
 
