@@ -10,7 +10,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/media", StaticFiles(directory="media"), name="media")
 
 
-@app.get("/")
+@app.get("/", name="index")
 async def index(request: Request):
     context = {"request": request}
 
