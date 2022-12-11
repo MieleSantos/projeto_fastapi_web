@@ -22,6 +22,12 @@ async def about(request: Request):
     return templates.TemplateResponse("about/index.html", context=context)
 
 
+@app.get("/contact", name="contact")
+async def contact(request: Request):
+    context = {"request": request}
+    return templates.TemplateResponse("contact/index.html", context=context)
+
+
 if __name__ == "__main__":
     import uvicorn
 
